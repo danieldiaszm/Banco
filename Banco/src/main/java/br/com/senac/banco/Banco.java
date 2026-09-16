@@ -14,11 +14,16 @@ public class Banco {
         ContaBancaria conta1 = new ContaBancaria("Daniel");
         
         conta1.depositar(18);
-        
-        conta1.extratoBancario();
-   
         conta1.sacar(20);
-     
         conta1.extratoBancario();
+        
+        
+        System.out.println(conta1.getTitular());
+        System.out.println(conta1.getSaldo());
+        
+       conta1.setTitular( "Daniel Dias");
+       
+       System.out.println(conta1.getTitular());
+       
     }
 }
