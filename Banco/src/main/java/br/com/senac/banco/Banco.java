@@ -4,6 +4,8 @@
 
 package br.com.senac.banco;
 
+import java.util.Scanner;
+
 /**
  *
  * @author daniel62977606
@@ -11,19 +13,26 @@ package br.com.senac.banco;
 public class Banco {
 
     public static void main(String[] args) {
-        ContaBancaria conta1 = new ContaBancaria("Daniel");
         
-        conta1.depositar(18);
-        conta1.sacar(20);
-        conta1.extratoBancario();
+        Scanner entrada = new Scanner(System.in);
+        String nome;
+        String cpf;
         
+        System.out.println("Nome do titular: ");
+        nome = entrada.next();
         
-        System.out.println(conta1.getTitular());
-        System.out.println(conta1.getSaldo());
+        System.out.println("CPF do titular: ");
+        cpf = entrada.nextLine();
         
-       conta1.setTitular( "Daniel Dias");
+        ContaPF conta1 = new ContaPF(445645745, "Lucas");
+        ContaPJ conta2 = new ContaPJ(545476765, "Daniel");
+         conta1.depositar(50);
+         conta2.depositar(60);
+        
+        conta1.apresentar();
+        
+       System.out.println();
        
-       System.out.println(conta1.getTitular());
-       
+       conta2.apresentar();
     }
 }

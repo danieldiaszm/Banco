@@ -47,6 +47,10 @@ public class ContaBancaria {
     
     public void extratoBancario (){
         System.out.println("Saldo: " + this.saldo);
+    }        
+
+    public void apresentar (){
+        
     }
 }
 
