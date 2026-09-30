@@ -45,6 +45,18 @@ public class ContaBancaria {
         }
     }
     
+    
+     public void verificarSaldo (){
+         if (this.saldo == 0){
+             System.out.println("Conta sem saldo"); 
+         }else if(this.saldo > 0 && this.saldo <= 500){
+             System.out.println("Saldo baixo!"); 
+         }else if(this.saldo >500 && this.saldo <= 2000){
+             System.out.println("Saldo normal");
+         }else{
+             System.out.println("Conta elevado");
+         }  
+     }
     public void extratoBancario (){
         System.out.println("Saldo: " + this.saldo);
     }        
